@@ -1,0 +1,68 @@
+@import '../../utils/styles/vars';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  overflow: hidden;
+  transition: all 350ms;
+  height: 100%;
+
+  &__image {
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  &__body {
+    font-family: $monserrat;
+    background-color: $white;
+    padding: 20px;
+    z-index: 10;
+    flex-grow: 1;
+
+    &__title {
+      font-size: $subTitle;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      color: $darkGrey;
+    }
+  }
+}
+
+.slider {
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__items {
+    counter-reset: slide;
+  }
+
+  &__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    counter-increment: slide;
+    height: 250px;
+    position: relative;
+
+    &::before {
+      content: counter(slide) "/5";
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #fff;
+      font-style: italic;
+      font-size: 32px;
+      font-weight: bold;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../utils/styles/vars';
+
+.hamburger {
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  pointer-events: auto;
+
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: $black;
+  margin: 10px 0;
+  // margin-block: 10px;
+  border-radius: 4px;
+  transition: transform 0.5s;
+  z-index: 999;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.2, 0.2);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}

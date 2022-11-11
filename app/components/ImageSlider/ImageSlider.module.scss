@@ -1,0 +1,81 @@
+@import '../../utils/styles/vars';
+
+.slider {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.right_arrow {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: $white;
+  z-index: 10;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $darkGrey;
+  }
+}
+
+.left_arrow {
+  position: absolute;
+  top: 50%;
+  left: 0.5%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: $white;
+  z-index: 10;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $darkGrey;
+  }
+}
+
+.slide {
+  opacity: 0;
+  transition: 1s ease;
+
+  &--active {
+    opacity: 1;
+    transition: 2s ease;
+    transform: scale(1.08);
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 0.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.dot {
+  color: $white;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &--active {
+    font-size: 2rem;
+    color: $darkGrey;
+    cursor: pointer;
+
+  }
+}
