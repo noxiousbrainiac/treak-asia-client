@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './LocationCard.module.scss';
-import ImageSlider from '../ImageSlider/ImageSlider.component';
+import ImageSlider from '../ui/ImageSlider/ImageSlider.component';
 
 const LocationCard = ({ location, locale }) => {
 	return (

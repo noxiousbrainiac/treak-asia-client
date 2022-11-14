@@ -1,5 +1,5 @@
-import styles from '../app/utils/styles/Home.module.scss';
-import client from '../app/utils/contentful';
+import styles from '../utils/styles/Home.module.scss';
+import client from '../utils/contentful';
 
 export default function Home({ locations }) {
 	return <div className={styles.container}></div>;

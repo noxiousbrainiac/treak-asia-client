@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { navMenuList } from '../../utils/lists/lists';
+import { navMenuList } from '../../../utils/lists/lists';
 import DropDownMenu from './DropDownMenu/DropDownMenu.component';
 import Hamburger from './Hamburger/Hamburger.component';
 import styles from './Header.module.scss';
