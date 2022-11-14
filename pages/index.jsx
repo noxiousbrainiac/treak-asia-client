@@ -2,7 +2,6 @@ import styles from '../app/utils/styles/Home.module.scss';
 import client from '../app/utils/contentful';
 
 export default function Home({ locations }) {
-	console.log(locations);
 	return <div className={styles.container}></div>;
 }
 
