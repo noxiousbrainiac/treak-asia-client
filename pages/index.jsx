@@ -1,17 +1,26 @@
-import styles from '../utils/styles/Home.module.scss';
+import Meta from '../components/Meta/Meta.component';
 import client from '../utils/contentful';
 
-export default function Home({ locations }) {
-	return <div className={styles.container}></div>;
+export default function Home({ fields, locale }) {
+	const metaProps = {
+		locale: locale,
+		children: null,
+		...fields?.meta.fields
+	};
+
+	return (
+		<>
+			<Meta {...metaProps} />
+		</>
+	);
 }
 
 export async function getStaticProps({ locale }) {
-	const locations = await client.getEntries({
-		content_type: 'location',
+	const { fields = null } = await client.getEntry('6eGES4JHIh3PWPEBYaXLht', {
 		locale
 	});
 
 	return {
-		props: { locations }
+		props: { fields, locale }
 	};
 }
