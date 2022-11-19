@@ -1,20 +1,17 @@
 import React from 'react';
-
 import styles from './LocationCard.module.scss';
 import ImageSlider from '../ui/ImageSlider/ImageSlider.component';
 
-const LocationCard = ({ location, locale }) => {
+const LocationCard = ({ location }) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.card__image}>
 				<ImageSlider />
 			</div>
 			<div className={styles.card__body}>
-				<h3 className={styles.card__body__title}>{location[locale].title}</h3>
+				<h3 className={styles.card__body__title}>{location.title}</h3>
 
-				<p className={styles.card__body__description}>
-					{location[locale].description}
-				</p>
+				<p className={styles.card__body__description}>{location.description}</p>
 			</div>
 		</div>
 	);
