@@ -2,7 +2,7 @@ import React from 'react';
 import useSectionProps from './useSectionProps';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-const Index = (props) => {
+const SectionRichText = (props) => {
 	const { richText, options } = useSectionProps(props);
 
 	return (
@@ -14,4 +14,4 @@ const Index = (props) => {
 	);
 };
 
-export default Index;
+export default SectionRichText;
