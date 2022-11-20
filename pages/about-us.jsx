@@ -3,17 +3,21 @@ import client from '../utils/contentful';
 import Meta from '../components/Meta/Meta.component';
 import AboutUsScreen from '../components/screens/AboutUs';
 
-export default function AboutUs({ fields, locale }) {
+export default function AboutUs({ locale, content, meta }) {
 	const metaProps = {
 		locale: locale,
 		children: null,
-		...fields?.meta.fields
+		...meta.fields
 	};
 
 	return (
 		<>
 			<Meta {...metaProps} />
-			<AboutUsScreen {...fields} />
+			<article>
+				{content?.map((section) => (
+					<AboutUsScreen key={section.fields.id} sectionData={section} />
+				))}
+			</article>
 		</>
 	);
 }
@@ -23,7 +27,13 @@ export async function getStaticProps({ locale }) {
 		locale
 	});
 
+	const { pageContent, meta } = fields;
+
+	const content = await Promise.all(
+		pageContent.map((sec) => client.getEntry(`${sec.sys.id}`, { locale }))
+	);
+
 	return {
-		props: { fields, locale }
+		props: { locale, content, meta }
 	};
 }
