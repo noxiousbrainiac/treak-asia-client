@@ -1,7 +1,7 @@
 import React from 'react';
 import client from '../utils/contentful';
 import Meta from '../components/Meta/Meta.component';
-import AboutUsScreen from '../components/screens/AboutUs';
+import PageScreen from '../components/screens/PageScreen';
 
 export default function AboutUs({ locale, content, meta }) {
 	const metaProps = {
@@ -15,7 +15,7 @@ export default function AboutUs({ locale, content, meta }) {
 			<Meta {...metaProps} />
 			<article>
 				{content?.map((section) => (
-					<AboutUsScreen key={section.fields.id} sectionData={section} />
+					<PageScreen key={section.fields.id} sectionData={section} />
 				))}
 			</article>
 		</>
