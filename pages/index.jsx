@@ -1,5 +1,5 @@
-import Meta from '../components/Meta/Meta.component';
-import client from '../utils/contentful';
+import Meta from 'components/Meta/Meta.component';
+import client from 'utils/contentful';
 
 export default function Home({ fields, locale }) {
 	const metaProps = {

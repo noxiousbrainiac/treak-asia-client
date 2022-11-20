@@ -1,6 +1,6 @@
 import React from 'react';
+import ImageSlider from 'components/ui/ImageSlider/ImageSlider.component';
 import styles from './LocationCard.module.scss';
-import ImageSlider from '../ui/ImageSlider/ImageSlider.component';
 
 const LocationCard = ({ location }) => {
 	return (

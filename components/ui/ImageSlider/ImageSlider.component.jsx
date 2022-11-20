@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import styles from './ImageSlider.module.scss';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { BsDot } from 'react-icons/bs';
+import styles from './ImageSlider.module.scss';
 
 const images = [
 	'https://www.kirghizasia.com/img/pdn1/01.jpg',

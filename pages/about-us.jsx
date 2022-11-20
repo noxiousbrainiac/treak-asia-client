@@ -1,7 +1,8 @@
 import React from 'react';
-import client from '../utils/contentful';
-import Meta from '../components/Meta/Meta.component';
-import PageScreen from '../components/screens/PageScreen';
+import client from 'utils/contentful';
+import { getDocumentFields } from 'utils/contentful/helper';
+import Meta from 'components/Meta/Meta.component';
+import PageContent from 'components/screens/PageContent';
 
 export default function AboutUs({ locale, content, meta }) {
 	const metaProps = {
@@ -15,7 +16,7 @@ export default function AboutUs({ locale, content, meta }) {
 			<Meta {...metaProps} />
 			<article>
 				{content?.map((section) => (
-					<PageScreen key={section.fields.id} sectionData={section} />
+					<PageContent key={section.fields.id} sectionData={section} />
 				))}
 			</article>
 		</>
@@ -23,11 +24,11 @@ export default function AboutUs({ locale, content, meta }) {
 }
 
 export async function getStaticProps({ locale }) {
-	const { fields = null } = await client.getEntry('2vDfqVZyM7Ty5aCuzkKtDG', {
+	const data = await client.getEntry('2vDfqVZyM7Ty5aCuzkKtDG', {
 		locale
 	});
 
-	const { pageContent, meta } = fields;
+	const { pageContent, meta } = getDocumentFields(data);
 
 	const content = await Promise.all(
 		pageContent.map((sec) => client.getEntry(`${sec.sys.id}`, { locale }))
