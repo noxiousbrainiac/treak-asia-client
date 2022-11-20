@@ -23,7 +23,7 @@ export default function AboutUs({ locale, content, meta }) {
 	);
 }
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
 	const data = await client.getEntry('2vDfqVZyM7Ty5aCuzkKtDG', {
 		locale
 	});
