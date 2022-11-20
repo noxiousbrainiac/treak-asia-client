@@ -3,11 +3,11 @@ import { getDocumentFields } from 'utils/contentful/helper';
 import SectionRichText from 'components/ui/Sections/SectionRichText';
 
 const PageContent = ({ sectionData }) => {
-	const { type, data } = getDocumentFields(sectionData);
+	const { type, data, id } = getDocumentFields(sectionData);
 
 	switch (type) {
 		case 'RICH':
-			return <SectionRichText data={data} />;
+			return <SectionRichText data={data} id={id} />;
 
 		default:
 			return null;

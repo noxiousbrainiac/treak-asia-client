@@ -2,12 +2,13 @@ import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Container from 'components/ui/Container/Container.component';
 import useSectionProps from './useSectionProps';
+import styles from './styles.module.scss';
 
 const SectionRichText = (props) => {
-	const { richText, options } = useSectionProps(props);
+	const { richText, options, id } = useSectionProps(props);
 
 	return (
-		<section>
+		<section id={id} className={styles.richTextSection}>
 			<Container>{documentToReactComponents(richText, options)}</Container>
 		</section>
 	);
