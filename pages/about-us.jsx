@@ -31,7 +31,7 @@ export async function getStaticProps({ locale }) {
 	const { pageContent, meta } = getDocumentFields(data);
 
 	const content = await Promise.all(
-		pageContent.map((sec) => client.getEntry(`${sec.sys.id}`, { locale }))
+		pageContent?.map((sec) => client.getEntry(`${sec.sys.id}`, { locale }))
 	);
 
 	return {
