@@ -1,0 +1,17 @@
+@import './vars';
+@import './functions';
+
+@mixin flex($fd: row, $jc: initial, $ai: initial, $fw: nowrap) {
+  display: flex;
+  flex-flow: $fd $fw;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin fontSize($size, $lineHeight: null) {
+  font-size: calcRem($size);
+
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+}
