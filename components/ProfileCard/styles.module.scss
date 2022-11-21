@@ -1,0 +1,51 @@
+@import "utils/styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  max-height: 500px;
+  margin-bottom: 20px;
+
+  @include phone {
+    flex-direction: column;
+    max-height: inherit;
+  }
+}
+
+.imageContainer {
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+
+  @include phone {
+    padding: 0;
+  }
+}
+
+.title {
+  @include fontSize(20px, 24px);
+
+  text-align: left;
+  font-weight: 500;
+}
+
+.role {
+  text-align: left;
+  color: $green;
+  margin: 10px 0;
+}
+
+.description {
+  text-align: left;
+}
