@@ -6,17 +6,17 @@ import { getDocumentFields } from 'utils/contentful/helper';
 const options = {
 	renderNode: {
 		[BLOCKS.EMBEDDED_ASSET]: ({ data }) => {
-			const asset = getDocumentFields(data.target);
+			const { file, title } = getDocumentFields(data.target);
 
 			return (
-				<div className="max-w-md mx-auto my-4">
+				<div className="max-w-sm mx-auto my-4">
 					<Image
 						priority
-						alt={asset.title}
+						alt={title}
 						width="1500"
 						height="1000"
 						quality={100}
-						src={`https:${asset.file.url}`}
+						src={`https:${file.url}`}
 					/>
 				</div>
 			);

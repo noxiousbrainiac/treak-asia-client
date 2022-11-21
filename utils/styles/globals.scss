@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import 'utils/styles/vars';
+@import "utils/styles/mixins";
 
 *,
 *::before,
@@ -39,4 +40,33 @@ body > div {
 .main {
   flex: 1 1 auto;
   font-family: $monserrat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h1 {
+  @include fontSize(32px);
+}
+
+h2 {
+  @include fontSize(28px);
+}
+
+h3 {
+  @include fontSize(24px);
+}
+
+h4 {
+  @include fontSize(20px);
+}
+
+h5 {
+  @include fontSize(16px);
+}
+
+h6 {
+  @include fontSize(12px);
 }
