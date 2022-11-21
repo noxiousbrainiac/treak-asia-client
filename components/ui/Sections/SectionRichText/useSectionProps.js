@@ -6,7 +6,7 @@ import { getDocumentFields } from 'utils/contentful/helper';
 const options = {
 	renderNode: {
 		[BLOCKS.EMBEDDED_ASSET]: ({ data }) => {
-			const asset = data.target.fields;
+			const asset = getDocumentFields(data.target);
 
 			return (
 				<div className="max-w-md mx-auto my-4">
