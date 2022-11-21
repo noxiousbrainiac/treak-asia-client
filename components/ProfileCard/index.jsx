@@ -8,16 +8,15 @@ const ProfileCard = (props) => {
 
 	return (
 		<div className={styles.card}>
-			<div className={styles.imageContainer}>
-				<Image
-					priority
-					alt="alt"
-					width="1500"
-					height="1000"
-					quality={100}
-					src={`https:${imageUrl.file.url}`}
-				/>
-			</div>
+			<Image
+				className={styles.image}
+				priority
+				alt="alt"
+				width="1500"
+				height="1000"
+				quality={100}
+				src={`https:${imageUrl.file.url}`}
+			/>
 			<div className={styles.cardBody}>
 				<p className={styles.title}>{title}</p>
 				<p className={styles.role}>{role}</p>
