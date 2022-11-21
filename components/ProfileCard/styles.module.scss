@@ -10,7 +10,7 @@
   max-height: 500px;
   margin-bottom: 20px;
 
-  @include phone {
+  @include below-tablet {
     flex-direction: column;
     max-height: inherit;
   }
@@ -20,6 +20,11 @@
   overflow: hidden;
   border-radius: 15px;
   margin-bottom: 10px;
+  width: 30%;
+
+  @include below-tablet {
+    width: 100%;
+  }
 }
 
 .cardBody {
@@ -28,7 +33,7 @@
   justify-content: center;
   padding-left: 30px;
 
-  @include phone {
+  @include below-tablet {
     padding: 0;
   }
 }
