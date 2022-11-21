@@ -1,4 +1,5 @@
-@import '../../../../utils/styles/vars';
+@import 'utils/styles/mixins';
+@import 'utils/styles/vars';
 
 .menu {
   display: flex;
@@ -8,11 +9,12 @@
   width: 100%;
 
   &__item {
+    @include fontSize(20px);
+
     text-align: center;
     padding: 15px;
     margin: 5px 0;
     width: 100%;
-    font-size: $subTitle;
     transition: 0.3s ease-in-out;
     color: $black;
     cursor: pointer;
