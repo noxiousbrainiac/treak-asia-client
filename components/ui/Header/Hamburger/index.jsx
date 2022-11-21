@@ -1,4 +1,4 @@
-import styles from './Hamburger.module.scss';
+import styles from './styles.module.scss';
 
 const Hamburger = ({ open, setOpen }) => {
 	return (

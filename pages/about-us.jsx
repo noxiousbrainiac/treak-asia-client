@@ -1,7 +1,7 @@
 import React from 'react';
 import client from 'utils/contentful';
 import { getDocumentFields } from 'utils/contentful/helper';
-import Meta from 'components/Meta/Meta.component';
+import Meta from 'components/Meta';
 import PageContent from 'components/screens/PageContent';
 
 export default function AboutUs({ locale, content, meta }) {

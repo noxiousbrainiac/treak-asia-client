@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { navMenuList } from 'utils/lists/lists';
-import DropDownMenu from './DropDownMenu/DropDownMenu.component';
-import Hamburger from './Hamburger/Hamburger.component';
-import styles from './Header.module.scss';
-import Menu from './Menu/Menu.component';
-import SwitchLocale from './SwitchLocale/SwitchLocale.component';
+import DropDownMenu from './DropDownMenu';
+import Hamburger from './Hamburger';
+import styles from './styles.module.scss';
+import Menu from './Menu';
+import SwitchLocale from './SwitchLocale';
 
 const Header = () => {
 	const [open, setOpen] = useState(false);

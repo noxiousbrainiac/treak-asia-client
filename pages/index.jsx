@@ -1,4 +1,4 @@
-import Meta from 'components/Meta/Meta.component';
+import Meta from 'components/Meta';
 import client from 'utils/contentful';
 
 export default function Home({ fields, locale }) {

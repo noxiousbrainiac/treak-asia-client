@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './Menu.module.scss';
+import styles from './styles.module.scss';
 
 const Menu = ({ list }) => {
 	const router = useRouter();

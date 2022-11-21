@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import styles from './SwitchLocale.module.scss';
+import styles from './styles.module.scss';
 
 const SwitchLocale = ({ color, className }) => {
 	const router = useRouter();

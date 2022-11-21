@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from './DropDownMenu.module.scss';
+import styles from './styles.module.scss';
 
 const DropDownMenu = ({ list, setOpen }) => {
 	const router = useRouter();

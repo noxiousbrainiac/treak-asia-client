@@ -1,6 +1,6 @@
 import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Container from 'components/ui/Container/Container.component';
+import Container from 'components/ui/Container';
 import useSectionProps from './useSectionProps';
 import styles from './styles.module.scss';
 
