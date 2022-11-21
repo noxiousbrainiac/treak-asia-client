@@ -1,7 +1,7 @@
 import React from 'react';
 import { getDocumentFields } from 'utils/contentful/helper';
 import SectionRichText from 'components/ui/Sections/SectionRichText';
-import SectionProfilesCards from '../../ui/Sections/SectionProfilesCards';
+import SectionProfilesCards from 'components/ui/Sections/SectionProfilesCards';
 
 const PageContent = ({ sectionData }) => {
 	const { type, data, id } = getDocumentFields(sectionData);

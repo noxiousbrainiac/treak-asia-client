@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 const SwitchLocale = ({ color, className }) => {
 	const router = useRouter();
 	const { locale } = router;
-	const [value, setValue] = useState(locale === 'en');
+	const [value, setValue] = useState(locale);
 
 	const handleChange = () => {
 		setValue(!value);
