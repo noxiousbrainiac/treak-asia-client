@@ -15,3 +15,27 @@
     line-height: $lineHeight;
   }
 }
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $max-tablet-size) {
+    @content;
+  }
+}
+
+@mixin below-tablet {
+  @media (max-width: $default-tablet-size) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $max-mobile-size) {
+    @content;
+  }
+}
