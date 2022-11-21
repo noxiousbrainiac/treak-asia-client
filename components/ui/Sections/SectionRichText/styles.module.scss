@@ -3,4 +3,19 @@
 
 .richTextSection {
   padding: 30px 0;
+
+  ul {
+    margin: 10px 0;
+    padding-left: 15px;
+
+    li {
+      position: relative;
+
+      &:before {
+        content: '-';
+        position: absolute;
+        left: -10px;
+      }
+    }
+  }
 }
