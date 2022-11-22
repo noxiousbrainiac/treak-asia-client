@@ -1,17 +1,24 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ProfileCard from 'components/ProfileCard';
 import Container from 'components/ui/Container';
+import AnimatedWrapper from 'components/AnimatedWrapper';
+import { animateOptions } from 'utils/constants';
+import useSectionProps from './useSectionProps';
 
-const SectionProfilesCards = ({ data, id }) => {
+const SectionProfilesCards = (props) => {
+	const { classname, data } = useSectionProps(props);
 	return (
-		<section id={id}>
+		<section className={classname}>
 			<Container>
-				<div className="py-5 flex flex-col">
-					{data.length > 0 &&
-						data?.map((profileData) => (
-							<ProfileCard key={profileData.sys.id} profileData={profileData} />
-						))}
-				</div>
+				{data?.length > 0 &&
+					data.map((profileData) => (
+						<AnimatedWrapper key={profileData.sys.id}>
+							<motion.div variants={animateOptions}>
+								<ProfileCard profileData={profileData} />
+							</motion.div>
+						</AnimatedWrapper>
+					))}
 			</Container>
 		</section>
 	);
