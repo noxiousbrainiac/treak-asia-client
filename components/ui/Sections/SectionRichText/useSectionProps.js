@@ -1,7 +1,9 @@
 import { BLOCKS } from '@contentful/rich-text-types';
 import Image from 'next/image';
 import get from 'lodash/get';
+import cn from 'classnames';
 import { getDocumentFields } from 'utils/contentful/helper';
+import styles from './styles.module.scss';
 
 const options = {
 	renderNode: {
@@ -26,7 +28,10 @@ const options = {
 
 const useSectionProps = ({ data, id }) => {
 	const { richText } = getDocumentFields(get(data, '[0]', {}));
-	return { richText, options, id };
+
+	const className = cn(styles.richTextSection, styles[id]);
+
+	return { richText, options, className };
 };
 
 export default useSectionProps;
