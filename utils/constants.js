@@ -1,4 +1,4 @@
-export const animateOptions = {
+export const xAnimateOptions = {
 	offscreen: {
 		x: -300,
 		opacity: 0
