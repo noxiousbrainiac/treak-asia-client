@@ -1,7 +1,14 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { getDocumentFields } from 'utils/contentful/helper';
-import SectionRichText from 'components/ui/Sections/SectionRichText';
-import SectionProfilesCards from 'components/ui/Sections/SectionProfilesCards';
+
+const SectionRichText = dynamic(() =>
+	import('components/ui/Sections/SectionRichText')
+);
+
+const SectionProfilesCards = dynamic(() =>
+	import('components/ui/Sections/SectionProfilesCards')
+);
 
 const PageContent = ({ sectionData }) => {
 	const { type, data, id } = getDocumentFields(sectionData);
