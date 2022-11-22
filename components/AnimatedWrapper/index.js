@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AnimatedWrapper = ({ children }) => {
+const AnimatedWrapper = ({ children, options }) => {
 	return (
 		<motion.div
 			initial="offscreen"
 			whileInView="onscreen"
-			viewport={{ once: true, amount: 0.8 }}
+			viewport={{ once: true, amount: 0.5 }}
 		>
-			{children}
+			<motion.div variants={options}>{children}</motion.div>
 		</motion.div>
 	);
 };

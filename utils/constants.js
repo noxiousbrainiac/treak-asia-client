@@ -1,6 +1,6 @@
-export const xAnimateOptions = {
+export const xBounceOptions = {
 	offscreen: {
-		x: -300,
+		x: -200,
 		opacity: 0
 	},
 	onscreen: {
@@ -8,8 +8,22 @@ export const xAnimateOptions = {
 		opacity: 1,
 		transition: {
 			type: 'spring',
-			bounce: 0.4,
-			duration: 0.8
+			duration: 1
+		}
+	}
+};
+
+export const yOptions = {
+	offscreen: {
+		y: 50,
+		opacity: 0
+	},
+	onscreen: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			type: 'spring',
+			duration: 1.5
 		}
 	}
 };

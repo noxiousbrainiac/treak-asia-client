@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import ProfileCard from 'components/ProfileCard';
 import Container from 'components/ui/Container';
 import AnimatedWrapper from 'components/AnimatedWrapper';
@@ -13,10 +12,8 @@ const SectionProfilesCards = (props) => {
 			<Container>
 				{data?.length > 0 &&
 					data.map((profileData) => (
-						<AnimatedWrapper key={profileData.sys.id}>
-							<motion.div variants={xBounceOptions}>
-								<ProfileCard profileData={profileData} />
-							</motion.div>
+						<AnimatedWrapper key={profileData.sys.id} options={xBounceOptions}>
+							<ProfileCard profileData={profileData} />
 						</AnimatedWrapper>
 					))}
 			</Container>
